@@ -15,7 +15,8 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import io from 'socket.io-client';
 
-const socket = io('https://api.tuplrc-cla.com'); // Connect to the Socket.IO server
+const socket = io('https://api.tuplrc-cla.com', {path: '/socket.io',
+                                                 transports: ['websocket'],}); // Connect to the Socket.IO server
 
 const ResourceModal = () => {
   console.log('resource modal rendered');
