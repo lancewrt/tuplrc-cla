@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Pacifico&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+:root{
+    --black:#1F1F1F;
+    --tup-color: #94152B;
+    --white: #fff;
+    --button:  #97170E;
+    --button-hover:  #75110a;
+    --shadow: #0000003b;
+    --yellow: #EDDF13;
+    --yellow-hover: rgb(218, 168, 3);
+    --yellow-filter: brightness(0) saturate(10%) invert(90%) sepia(41%) saturate(1000%) hue-rotate(332deg) brightness(103%) contrast(103%);
+    --white-filter:  brightness(100%) saturate(0) invert(100%) sepia(0) saturate(0) hue-rotate(0) brightness(1000%) contrast(100%);
+    --green: #54CB58;
+    --emerald: #022403;
+    --light-gray: #F7F7F7;
+    --blue: #5499CB;
+    --table-header: #6F6A6A;
+    --table-border-bottom:#D9D9D9;
+    --light-red: rgba(148, 21, 43, 0.1);
+}
+
+.book-container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* width: 24%; */
+    /* background-color: #5499CB; */
+    align-items: center;
+    padding: 0 20px;
+}
+
+.book-container div p{
+    text-align: center;
+}
+
+.book-container .books{
+    display: flex;
+}
+
+.book-container p{
+    margin: 0;
+}
+
+.book-container img{
+    width: 230px;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px var(--shadow);
+}
+
+.book-container .title{
+    font-weight: 500;
+    font-size: 1rem;
+    width: 100%;
+    margin: 0;
+    /* background-color: #54CB58; */
+}
+
+
+
+.search-book-container .search-book{
+    width: 100%;
+    height: 370px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px var(--shadow);
+    
+}
+
+.search-book-container .title-author{
+    height: 20%;
+}
+
+.search-book-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    /* background-color: #54CB58; */
+    /* border: 1px solid black; */
+    /* height: 500px; */
+    text-align: center;
+}
+
+.search-book-container p{
+    margin: 0;
+}
+
+.search-book-container img{
+    width: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px var(--shadow);
+}
+
+.search-book-container .title{
+    /* background-color: #022403; */
+    font-weight: 500;
+    font-size: 1rem !important;
+    width: 100% !important;
+    margin: 0;
+}
+
+.search-book-container .author{
+    font-size: 1rem !important;
+    width: 100%;
+}
+
+.thesis-cover{
+    width: 100%;
+    height: 370px;
+    background-color: var(--tup-color);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px var(--shadow);
+}
+
+.thesis-cover .title{
+    font-size: 0.6rem !important;
+}

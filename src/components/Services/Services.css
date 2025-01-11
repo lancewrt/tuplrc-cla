@@ -1,0 +1,118 @@
+@font-face {
+    font-family: 'Inter';
+    font-weight: 400;
+    src: url('../../assets/Fonts/Inter_24pt-Regular.ttf') format('ttf');
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter';
+    text-decoration: none;
+}
+
+:root{
+    --black:#0c0c0c;
+    --dark-gray: #131313;
+    --tup-color: #94152B;
+    --white: #fff;
+    --button:  #97170E;
+    --button-hover:  #75110a;
+    --shadow: #0000003b;
+    --yellow: #EDDF13;
+    --yellow-hover: rgb(218, 168, 3);
+    --yellow-filter: brightness(0) saturate(10%) invert(90%) sepia(41%) saturate(1000%) hue-rotate(332deg) brightness(103%) contrast(103%);
+    --white-filter:  brightness(100%) saturate(0) invert(100%) sepia(0) saturate(0) hue-rotate(0) brightness(1000%) contrast(100%);
+    --green: #54CB58;
+    --light-gray: #F7F7F7;
+    --blue: #5499CB;
+    --table-header: #6F6A6A;
+    --table-border-bottom:#D9D9D9;
+    --light-red: rgba(148, 21, 43, 0.1);
+    --lightest-red: #FFCBD4;
+    --lightest-green:#C7C48E;
+    --regular:400;
+
+}
+
+.services-container .services-header{
+    background:linear-gradient(
+        rgba(0, 0, 0, 0), /* Top gradient color */
+        rgba(255, 255, 255, 0.486) /* Bottom gradient color */
+      ), url('../../assets/OPAC/photos/cla-hall.png');
+    width: 100%;
+    height: 80vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+}
+
+
+.services-container .services-header h3{
+    margin-top: 80px;
+    font-size: 3rem;
+}
+
+.services-container .services-header p{
+    width: 50%;
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+.services-container .service img{
+    border: 5px solid var(--tup-color);
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+.services-container .service-list{
+    padding: 100px 230px;
+    
+}
+
+.services-container .service-list .service{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    gap: 50px;
+    padding: 50px;
+    /* height: 600px; */
+}
+
+.services-container .service-list .service div h5{
+    color: var(--tup-color);
+    font-size: 1.5rem;
+}
+
+.services-container .service-list .service div span{
+    font-size: 1.3rem;
+    color: var(--black);
+}
+
+ /* Responsive Design */
+@media screen and (max-width: 1024px) {
+    .services-container .service-list{
+        padding: 0;
+    }
+
+    .services-container .services-header h3{
+        font-size: 2.5rem;
+    }
+
+    .services-container .services-header p{
+        font-size: 1.2rem;
+        width: 90%;
+    }
+  }
+  
+ 
