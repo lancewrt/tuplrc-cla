@@ -15,7 +15,7 @@ import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 import io from 'socket.io-client';
 
-const socket = io('https:api.tuplrc-cla.com'); // Connect to the Socket.IO server
+const socket = io('https://api.tuplrc-cla.com'); // Connect to the Socket.IO server
 
 const ResourceModal = () => {
   console.log('resource modal rendered');
@@ -86,7 +86,7 @@ const ResourceModal = () => {
     console.log('viewing resource');
     try {
       setLoading(true);
-      const response = await axios.get('https:api.tuplrc-cla.com/resources/view', {
+      const response = await axios.get('https://api.tuplrc-cla.com/resources/view', {
         params: { id },
       });
 
