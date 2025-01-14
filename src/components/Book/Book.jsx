@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import book1 from '../../assets/OPAC/photos/book1.jpg';
 import './Book.css';
 
+
 const Book = ({ isSearch, isView, item }) => {
   console.log(item);
   
