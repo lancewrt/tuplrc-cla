@@ -175,7 +175,54 @@ const ResourceModal = () => {
 
             
           {/* Related resources */}
-          
+          <div className="col-12 order-3 related-res" ref={relatedResourcesRef}>
+            <h4>Related Resources</h4>
+            <div className="resource col">
+            <Swiper
+              slidesPerView={5}
+              spaceBetween={5}
+              breakpoints={{
+                320: { // Small screens (mobile)
+                  slidesPerView: 1,
+                  spaceBetween: 10,
+                },
+                480: { // Medium screens
+                  slidesPerView: 2,
+                  spaceBetween: 10,
+                },
+                768: { // Tablet screens
+                  slidesPerView: 3,
+                  spaceBetween: 15,
+                },
+                1024: { // Desktop screens
+                  slidesPerView: 3,
+                  spaceBetween: 20,
+                },
+                1200: { // Large screens
+                  slidesPerView: 5,
+                  spaceBetween: 25,
+                },
+              }}
+              // pagination={{
+              //   clickable: true,
+              // }}
+              modules={[Pagination]}
+              className="mySwiper"
+            >
+               
+               {Array.isArray(relatedBooks) && relatedBooks.length > 0 ? (
+                relatedBooks.map((item, index) => (
+                  <SwiperSlide><Link to={`/resource?keyword=${keyword}&id=${item.resource_id}`} onClick={handleNavigate} className="resource" key={index}>
+                    <Book item={item} isSearch={isSearch} />
+                  </Link></SwiperSlide>
+                ))
+              ) : (
+                <p className='no-related'>No related resources.</p>
+              )}
+             
+            </Swiper>
+            </div>
+          </div>
         </div>
       </div>
       <Loading loading={loading} isView={true}></Loading>
