@@ -159,7 +159,7 @@ const Home = () => {
   const getFeaturedBooks = async () => {
     console.log('getting featured books')
     try {
-        const response = await axios.get('https://api.tuplrc-cla.com/featured-books');
+        const response = await axios.get('https://api.tuplrc-cla.com/api/online-catalog/featured-books');
         console.log('Featured Books:', response);
         setFeaturedBooks(response.data);
     } catch (error) {
@@ -170,7 +170,7 @@ const Home = () => {
   const getJournalNewsletter = async () => {
     console.log('getting journals/newsletter')
     try {
-        const response = await axios.get('https://api.tuplrc-cla.com/journals-newsletters');
+        const response = await axios.get('https://api.tuplrc-cla.com/api/online-catalog/journals-newsletters');
         console.log('Journal and newsletters:', response);
         setJournalNewsletter(response.data);
     } catch (error) {
@@ -181,7 +181,7 @@ const Home = () => {
   const getFeaturedBook = async () => {
     console.log('getting featured book')
     try {
-        const response = await axios.get('https://api.tuplrc-cla.com/featured-book');
+        const response = await axios.get('https://api.tuplrc-cla.com/api/online-catalog/featured-book');
         console.log('Featured book:', response);
         setFeaturedBook(response.data[0]);
     } catch (error) {

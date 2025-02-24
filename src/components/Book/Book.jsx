@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import book1 from '../../assets/OPAC/photos/book1.jpg';
 import './Book.css';
 
-
 const Book = ({ isSearch, isView, item }) => {
   console.log(item);
   
@@ -16,7 +15,7 @@ const Book = ({ isSearch, isView, item }) => {
 
   useEffect(() => {
     if (!item) return;
-
+    
     if (item.type_id != 4) {
       let objectUrl;
       try {
