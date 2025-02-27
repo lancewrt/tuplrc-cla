@@ -14,7 +14,7 @@ const Book = ({ isSearch, isView, item }) => {
   const [preview, setPreview] = useState();
 
   useEffect(() => {
-    if (!item) return;
+    if (!item.resource_cover) return;
     
     if (item.type_id != 4) {
       let objectUrl;
@@ -36,7 +36,7 @@ const Book = ({ isSearch, isView, item }) => {
         }
       };
     } 
-  }, [item]);
+  }, [item.resource_cover]);
 
   return (
     <div className={isSearch ? 'search-book-container' : 'book-container'}>
