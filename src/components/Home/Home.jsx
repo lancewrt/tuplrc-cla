@@ -127,16 +127,15 @@ const Home = () => {
 
     let objectUrl;
     try{
-        objectUrl = URL.createObjectURL(featuredBook.book_cover);
-        setPreview(objectUrl);
-       
-        
+      objectUrl = URL.createObjectURL(bookData.file);
+      setPreview(objectUrl);
     }catch{
-        const blob = new Blob([new Uint8Array(featuredBook.book_cover.data)], { type: 'image/jpeg' });
-        objectUrl = URL.createObjectURL(blob);
-        setPreview(objectUrl)  
+        if (bookData.file.includes("http://books.google.com")) {
+            setPreview(bookData.file);
+        } else {
+            setPreview(`https://api.tuplrc-cla.com/${bookData.file}`);
+        }
     }
-
      // Cleanup function to revoke the Object URL
      return () => {
         if (objectUrl) {
@@ -159,7 +158,7 @@ const Home = () => {
   const getFeaturedBooks = async () => {
     console.log('getting featured books')
     try {
-        const response = await axios.get('https://api.tuplrc-cla.com/featured-books');
+        const response = await axios.get('https://api.tuplrc-cla.com/api/online-catalog/featured-books');
         console.log('Featured Books:', response);
         setFeaturedBooks(response.data);
     } catch (error) {
@@ -170,7 +169,7 @@ const Home = () => {
   const getJournalNewsletter = async () => {
     console.log('getting journals/newsletter')
     try {
-        const response = await axios.get('https://api.tuplrc-cla.com/journals-newsletters');
+        const response = await axios.get('https://api.tuplrc-cla.com/api/online-catalog/journals-newsletters');
         console.log('Journal and newsletters:', response);
         setJournalNewsletter(response.data);
     } catch (error) {
@@ -181,7 +180,7 @@ const Home = () => {
   const getFeaturedBook = async () => {
     console.log('getting featured book')
     try {
-        const response = await axios.get('https://api.tuplrc-cla.com/featured-book');
+        const response = await axios.get('https://api.tuplrc-cla.com/api/online-catalog/featured-book');
         console.log('Featured book:', response);
         setFeaturedBook(response.data[0]);
     } catch (error) {

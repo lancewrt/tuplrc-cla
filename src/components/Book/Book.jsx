@@ -19,14 +19,16 @@ const Book = ({ isSearch, isView, item }) => {
 
     if (item.type_id != 4) {
       let objectUrl;
-      try {
-        objectUrl = URL.createObjectURL(item.resource_cover);
+      try{
+        objectUrl = URL.createObjectURL(bookData.file);
         setPreview(objectUrl);
-      } catch {
-        const blob = new Blob([new Uint8Array(item.resource_cover.data)], { type: 'image/jpeg' });
-        objectUrl = URL.createObjectURL(blob);
-        setPreview(objectUrl);
-      }
+    }catch{
+        if (bookData.file.includes("http://books.google.com")) {
+            setPreview(bookData.file);
+        } else {
+            setPreview(`https://api.tuplrc-cla.com/${bookData.file}`);
+        }
+    }
 
       // Cleanup function to revoke the Object URL
       return () => {
