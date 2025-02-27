@@ -169,7 +169,7 @@ const Home = () => {
   const getJournalNewsletter = async () => {
     console.log('getting journals/newsletter')
     try {
-        const response = await axios.get('https://api.tuplrc-cla.com/api/online-catalog/journals-newsletters');
+        const response = await axios.get('https://api.tuplrc-cla.com/api/online-catalog/journal-newsletters');
         console.log('Journal and newsletters:', response);
         setJournalNewsletter(response.data);
     } catch (error) {
