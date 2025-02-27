@@ -127,13 +127,13 @@ const Home = () => {
 
     let objectUrl;
     try{
-      objectUrl = URL.createObjectURL(bookData.file);
+      objectUrl = URL.createObjectURL(featuredBook.book_cover);
       setPreview(objectUrl);
     }catch{
-        if (bookData.file.includes("http://books.google.com")) {
-            setPreview(bookData.file);
+        if (featuredBook.book_cover.includes("http://books.google.com")) {
+            setPreview(featuredBook.book_cover);
         } else {
-            setPreview(`https://api.tuplrc-cla.com/${bookData.file}`);
+            setPreview(`https://api.tuplrc-cla.com/${featuredBook.book_cover}`);
         }
     }
      // Cleanup function to revoke the Object URL

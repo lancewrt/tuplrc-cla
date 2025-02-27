@@ -19,13 +19,13 @@ const Book = ({ isSearch, isView, item }) => {
     if (item.type_id != 4) {
       let objectUrl;
       try{
-        objectUrl = URL.createObjectURL(bookData.file);
+        objectUrl = URL.createObjectURL(item.resource_cover);
         setPreview(objectUrl);
     }catch{
         if (bookData.file.includes("http://books.google.com")) {
-            setPreview(bookData.file);
+            setPreview(item.resource_cover);
         } else {
-            setPreview(`https://api.tuplrc-cla.com/${bookData.file}`);
+            setPreview(`https://api.tuplrc-cla.com/${item.resource_cover}`);
         }
     }
 
