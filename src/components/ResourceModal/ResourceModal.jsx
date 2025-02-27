@@ -51,16 +51,15 @@ const ResourceModal = () => {
   useEffect(() => {
     let objectUrl;
     if (resource && resource.type_id !== 4) {
-      try {
-        if (resource.resource_cover instanceof Blob) {
-          objectUrl = URL.createObjectURL(resource.resource_cover);
-        } else if (resource.resource_cover?.data) {
-          const blob = new Blob([new Uint8Array(resource.resource_cover.data)], { type: 'image/jpeg' });
-          objectUrl = URL.createObjectURL(blob);
-        }
+      try{
+        objectUrl = URL.createObjectURL(resource.resource_cover);
         setPreview(objectUrl);
-      } catch (error) {
-        console.error('Error creating object URL:', error);
+      }catch{
+        if (resource.resource_cover.includes("http://books.google.com")) {
+            setPreview(resource.resource_cover);
+        } else {
+            setPreview(`https://api.tuplrc-cla.com/${resource.resource_cover}`);
+        }
       }
     }
     return () => {

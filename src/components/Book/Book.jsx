@@ -21,13 +21,13 @@ const Book = ({ isSearch, isView, item }) => {
       try{
         objectUrl = URL.createObjectURL(item.resource_cover);
         setPreview(objectUrl);
-    }catch{
+      }catch{
         if (item.resource_cover.includes("http://books.google.com")) {
             setPreview(item.resource_cover);
         } else {
             setPreview(`https://api.tuplrc-cla.com/${item.resource_cover}`);
         }
-    }
+      }
 
       // Cleanup function to revoke the Object URL
       return () => {
