@@ -22,7 +22,7 @@ const Book = ({ isSearch, isView, item }) => {
         objectUrl = URL.createObjectURL(item.resource_cover);
         setPreview(objectUrl);
     }catch{
-        if (bookData.file.includes("http://books.google.com")) {
+        if (item.resource_cover.includes("http://books.google.com")) {
             setPreview(item.resource_cover);
         } else {
             setPreview(`https://api.tuplrc-cla.com/${item.resource_cover}`);
