@@ -123,17 +123,17 @@ const Home = () => {
   }, [loading]);
 
   useEffect(()=>{
-    if(!featuredBook.book_cover) return;
+    if(!featuredBook.filepath) return;
 
     let objectUrl;
     try{
-      objectUrl = URL.createObjectURL(featuredBook.book_cover);
+      objectUrl = URL.createObjectURL(featuredBook.filepath);
       setPreview(objectUrl);
     }catch{
-        if (featuredBook.book_cover.includes("http://books.google.com")) {
+        if (featuredBook.filepath.includes("http://books.google.com")) {
             setPreview(featuredBook.book_cover);
         } else {
-            setPreview(`https://api.tuplrc-cla.com/${featuredBook.book_cover}`);
+            setPreview(`https://api.tuplrc-cla.com/${featuredBook.filepath}`);
         }
     }
      // Cleanup function to revoke the Object URL
