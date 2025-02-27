@@ -80,7 +80,7 @@ const Search = () => {
   
     try {
       console.log('getting resources');
-      const response = await axios.get('https://api.tuplrc-cla.com/resources', {
+      const response = await axios.get('https://api.tuplrc-cla.com/api/online-catalog/resources', {
         params: {
           offset: 0,
           keyword,
@@ -117,7 +117,7 @@ const Search = () => {
   setOffset(newOffset);
 
   try {
-    const response = await axios.get('https://api.tuplrc-cla.com/resources', {
+    const response = await axios.get('https://api.tuplrc-cla.com/api/online-catalog/resources', {
       params: { 
         offset: newOffset, 
         keyword, 
@@ -170,7 +170,7 @@ const Search = () => {
   // get type
   const getType = async()=>{
     try{
-      const response = await axios.get('https://api.tuplrc-cla.com/type');
+      const response = await axios.get('https://api.tuplrc-cla.com/api/data/type');
       setResourceType(response.data)
     }catch (error) {
       console.error('Error retrieving resource type:', error.message);
@@ -180,7 +180,7 @@ const Search = () => {
    // get department
    const getDepartment = async()=>{
     try{
-      const response = await axios.get('https://api.tuplrc-cla.com/departments');
+      const response = await axios.get('https://api.tuplrc-cla.com/api/data/departments');
       setDepartments(response.data)
     }catch (error) {
       console.error('Error retrieving resource type:', error.message);
@@ -190,7 +190,7 @@ const Search = () => {
   // get topic
   const getTopic = async()=>{
     try{
-      const response = await axios.get('https://api.tuplrc-cla.com/topic');
+      const response = await axios.get('https://api.tuplrc-cla.com/api/data/topic');
       setTopic(response.data)
     }catch (error) {
       console.error('Error retrieving resource type:', error.message);

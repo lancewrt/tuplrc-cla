@@ -13,11 +13,6 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 // import required modules
 import { Pagination } from 'swiper/modules';
-import io from 'socket.io-client';
-
-const socket = io('https://api.tuplrc-cla.com', {path: '/socket.io',
-                                                 transports: ['websocket'],
-                                                 reconnectionAttempts: 5}); // Connect to the Socket.IO server
 
 const ResourceModal = () => {
   console.log('resource modal rendered');
@@ -42,15 +37,6 @@ const ResourceModal = () => {
 
   useEffect(()=>{
     viewResource();
-    
-    socket.on('updatedCatalog', () => {
-      console.log('catalog updated, refreshing catalog...');
-      viewResource();
-    });
-
-    return () => {
-      socket.off('updatedCatalog');
-    };
   },[])
 
   useEffect(() => {
@@ -88,10 +74,10 @@ const ResourceModal = () => {
     console.log('viewing resource');
     try {
       setLoading(true);
-      const response = await axios.get('https://api.tuplrc-cla.com/resources/view', {
+      const response = await axios.get('https://api.tuplrc-cla.com/api/online-catalog/resources/view', {
         params: { id },
       });
-
+      
       setResource(response.data.results[0]);
       setRelatedBooks(response.data.relatedBooks);
       console.log('Resource viewed:', response.data);
@@ -173,7 +159,6 @@ const ResourceModal = () => {
             )}
           </div>
 
-            
           {/* Related resources */}
           <div className="col-12 order-3 related-res" ref={relatedResourcesRef}>
             <h4>Related Resources</h4>
