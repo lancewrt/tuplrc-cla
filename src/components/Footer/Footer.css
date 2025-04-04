@@ -1,93 +1,31 @@
-@font-face {
-    font-family: 'Inter';
-    font-weight: 400;
-    src: url('../../assets/Fonts/Inter_24pt-Regular.ttf') format('ttf');
-}
+@import '../../assets/styles/global.css';
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter';
-    text-decoration: none;
-}
-
-:root{
-    --black:#0c0c0c;
-    --dark-gray: #131313;
-    --tup-color: rgb(148, 21, 43);
-    --white: #fff;
-    --button:  #97170E;
-    --button-hover:  #75110a;
-    --shadow: #0000003b;
-    --yellow: #EDDF13;
-    --yellow-hover: rgb(218, 168, 3);
-    --yellow-filter: brightness(0) saturate(10%) invert(90%) sepia(41%) saturate(1000%) hue-rotate(332deg) brightness(103%) contrast(103%);
-    --white-filter:  brightness(100%) saturate(0) invert(100%) sepia(0) saturate(0) hue-rotate(0) brightness(1000%) contrast(100%);
-    --green: #54CB58;
-    --light-gray: #F7F7F7;
-    --blue: #5499CB;
-    --table-header: #6F6A6A;
-    --table-border-bottom:#D9D9D9;
-    --light-red: rgba(148, 21, 43, 0.1);
-    --lightest-red: #FFCBD4;
-    --lightest-green:#C7C48E
-}
-
-.footer-container{
+footer{
+    background-color: var(--tup-color);
     width: 100%;
-    display: flex;
-    padding: 50px;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
-    color: var(--white);
-    background:linear-gradient(
-        rgba(148, 21, 42, 0.945), /* Top gradient color */
-        rgba(148, 21, 42, 0.918) /* Bottom gradient color */
-      ), url('../../assets/OPAC/photos/cla-hall.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: bottom;
+    /* height: 50vh; */
+    /* margin-top: 100px; */
 }
 
-
-.footer-container .footer-text p{
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    font-family: "Crimson Text", serif;
-    font-size: 1.3rem;
-    /* line-height: 20px; */
+footer .logo, footer .logo span,
+footer .quick-links h2,
+footer .contact-us h2{
+    font-family: var(--playfair) !important;
 }
 
-.footer-container .connect .socials{
-    display: flex;
-    justify-content: center;
-    gap: 10px;
+footer .copyright{
+    background-color: var(--dark-red);
 }
 
-
-.footer-container .connect p{
-    margin: 5px;
-    font-size: 0.9rem;
-    font-weight: 300;
+footer .copyright p,
+footer .sub,
+footer .quick-links p,
+footer .contact-us p{
+    font-family: var(--open-sans);
 }
 
-.footer-container .copyright{
-    font-size: 0.9rem;
-    font-weight: 300;
-}
-
-.footer-container .tc{
-    text-decoration: none;
-    color: var(--white);
-    font-size: 0.9rem;
-    font-weight: 300;
-    margin: 0;
-}
-
-.footer-container .tc-cpy{
-    text-align: center;
+@media screen and (max-width:720px) {
+    footer .small-font{
+        font-size: 0.8rem;
+    }
 }

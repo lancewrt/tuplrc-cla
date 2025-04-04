@@ -1,0 +1,16 @@
+@import '../../assets/styles/global.css';
+
+.hero-box{
+    width: 100%;
+    height: 70vh;
+    background-image: linear-gradient(#94152ab6, #94152ab6), 
+    url('../../assets/OPAC/photos/cla-hall.JPG');
+    background-size: cover;
+    background-position: bottom;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.hero-box h1{
+    font-family: var(--open-sans);
+}

@@ -1,0 +1,6 @@
+@import '../../assets/styles/global.css';
+
+.tc-container{
+    font-family: var(--open-sans) !important;
+    color: var(--dark-gray);
+}

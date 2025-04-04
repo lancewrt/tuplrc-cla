@@ -1,0 +1,14 @@
+@import '../../assets/styles/global.css';
+
+.services-page .icon{
+    color: var(--tup-color);
+}
+
+.services-page .service-title{
+    font-family: var(--open-sans);
+}
+
+.services-page .service-subtitle{
+    color: var(--medium3-gray);
+    font-family: var(--open-sans);
+}

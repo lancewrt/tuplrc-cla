@@ -1,0 +1,55 @@
+@import '../../assets/styles/global.css';
+
+.homepage-container{
+    width: 100%;
+    height: auto;
+}
+
+.top-welcome{
+    background-color: var(--dark-gray);
+    color: var(--white);
+}
+
+.book-container{
+    margin-top: 100px;
+}
+
+.book-container h4{
+    font-family: var(--open-sans);
+}
+
+/* Change Swiper arrows to black */
+.swiper-button-prev, .swiper-button-next {
+    color: var(--dark-gray) !important; /* Changes the arrow color to black */
+}
+
+.banner{
+    width: 100%;
+    height: 60vh;
+    background-image: linear-gradient(#000000d8, #000000e3), 
+    url('../../assets/background.jpg');
+    background-size: cover;
+    background-position: center;
+    margin-top: 100px;
+}
+  
+.banner h2{
+    font-family: var(--playfair);
+}
+
+.banner button:hover{
+    background-color: var(--white);
+    color: var(--dark-gray) !important;
+}
+
+.see-all{
+    color: var(--white);
+    background-color: var(--tup-color);
+}
+
+.see-all:hover,
+.see-all:focus,
+.see-all:active{
+    color: var(--white);
+    background-color: var(--tup-color);
+}

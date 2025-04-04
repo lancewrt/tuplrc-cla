@@ -1,0 +1,26 @@
+@import '../../assets/styles/global.css';
+
+.view-container .book-info h1,
+.view-container .book-info h4{
+    font-family: var(--open-sans) !important;
+    color: var(--dark-gray);
+}
+
+.view-container .author,
+.view-container .info{
+    font-family: var(--open-sans) !important;
+    color: var(--medium3-gray);
+}
+
+.view-container .book-cover{
+    height: 550px;
+    object-fit: cover;
+    /* box-shadow: 2px 2px 5px #00000036; */
+}
+
+.view-container .thesis-cover{
+    height: 600px;
+    width: 100%;
+    background-color: var(--tup-color);
+    /* box-shadow: 2px 2px 5px #00000036; */
+}

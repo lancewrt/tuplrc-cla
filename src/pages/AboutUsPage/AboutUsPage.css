@@ -1,0 +1,94 @@
+@import '../../assets/styles/global.css';
+
+.about-container{
+    width: 100%;
+}
+
+.about-container .aboutus{
+    height: 50vh;
+    /* background-color: aquamarine; */
+}
+
+.about-container .aboutus p{
+    font-family: var(--open-sans);
+}
+
+.about-container .aboutus h1{
+    font-family: var(--open-sans);
+    color: var(--dark-gray);
+}
+
+.about-container .gallery{
+    margin-bottom: 100px;
+}
+
+.about-container .gallery img{
+    height: 340px;
+    width: 555px;
+    object-fit: cover;
+}
+
+
+.about-container .mission,
+.about-container .vision{
+    min-height: 300px;
+    /*height: 70vh;*/
+    /* background-color: aqua; */
+}
+
+.about-container .mission-title,
+.about-container .vision-title{
+    color: var(--dark-gray);
+    font-family: var(--open-sans);
+}
+
+.about-container .mission-subtitle,
+.about-container .vision-subtitle{
+    color: var(--medium3-gray);
+    font-family: var(--open-sans);
+}
+
+.about-container .services{
+    margin-top: 100px;
+    height: 80vh;
+    background-color: var(--white);
+    box-shadow: 1px 2px 5px rgb(199, 199, 199);
+}
+
+.about-container .remark-box{
+    /*height 100vh;*/
+    min-height: 400px;
+}
+
+.about-container .prof{
+    color: var(--tup-color);
+    font-family: var(--open-sans);
+}
+
+.about-container .position{
+    color: var(--dark-gray);
+    font-family: var(--open-sans);
+}
+
+.about-container .remarks{
+    font-family: var(--open-sans);
+    color: var(--medium3-gray);
+}
+
+.about-container .faq{
+    height: auto;
+    padding: 100px;
+    background-color: var(--white);
+    box-shadow: 1px 2px 5px rgb(199, 199, 199);
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+.about-container .accordion-item{
+    max-width: 100%; /* Allows it to shrink on smaller screens */
+    width: 90%; /* Ensures it takes up most of the container but remains responsive */width: 700px;
+}
+
+.about-container .faq h2{
+    font-family: var(--open-sans);
+}

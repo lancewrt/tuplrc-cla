@@ -1,0 +1,17 @@
+@import '../../assets/styles/global.css';
+
+.search-container h1,
+.search-container h2,
+.search-container p,
+.search-container select,
+.search-container button{
+    font-family: var(--open-sans);
+}
+
+.search-container .filter{
+    font-size: 0.85rem;
+}
+
+.advanced-search{
+    
+}
