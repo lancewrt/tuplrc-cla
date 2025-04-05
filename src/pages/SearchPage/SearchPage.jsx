@@ -31,7 +31,7 @@ const SearchPage = () => {
     // array from letter A-Z
     const alphabet = Array.from({ length: 26 }, (_, i) => String.fromCharCode(97 + i));
     // resource
-    const {resource, loading, searchQuery} = useSelector(state=>state.resource);
+    const {resource, loading, searchQuery,searchPerformed} = useSelector(state=>state.resource);
     const {type} = useSelector(state=>state.type)
     const {dept} = useSelector(state=>state.dept)
     const {topic} = useSelector(state=>state.topic)
@@ -74,10 +74,10 @@ const SearchPage = () => {
 
     // handle advanced search
     useEffect(()=>{
-        if(isSearch){
+        if(isSearch&&advancedSearch.length>0){
             dispatch(setResource(advancedSearch))
         }
-    },[advancedSearch])
+    },[advancedSearch,resource])
 
     
     useEffect(() => {
@@ -284,9 +284,9 @@ const SearchPage = () => {
     // Change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
     
-    // Generate pagination buttons
     const renderPaginationButtons = () => {
         const buttons = [];
+        const displayRange = 1; // How many pages to show before and after current page
         
         // Previous button
         buttons.push(
@@ -299,15 +299,61 @@ const SearchPage = () => {
             </button>
         );
         
-        // Page numbers
-        for (let i = 1; i <= totalPages; i++) {
+        // First page
+        if (totalPages > 0) {
             buttons.push(
                 <button
-                    key={i}
-                    className={`btn ${currentPage === i ? 'btn-dark' : 'btn-outline-dark'}`}
-                    onClick={() => paginate(i)}
+                    key={1}
+                    className={`btn ${currentPage === 1 ? 'btn-dark' : 'btn-outline-dark'}`}
+                    onClick={() => paginate(1)}
                 >
-                    {i}
+                    1
+                </button>
+            );
+        }
+        
+        // Left ellipsis
+        if (currentPage > 2 + displayRange) {
+            buttons.push(
+                <button key="left-ellipsis" className="btn btn-outline-dark disabled">
+                    ...
+                </button>
+            );
+        }
+        
+        // Pages around current page
+        for (let i = Math.max(2, currentPage - displayRange); i <= Math.min(totalPages - 1, currentPage + displayRange); i++) {
+            if (i > 1 && i < totalPages) {
+                buttons.push(
+                    <button
+                        key={i}
+                        className={`btn ${currentPage === i ? 'btn-dark' : 'btn-outline-dark'}`}
+                        onClick={() => paginate(i)}
+                    >
+                        {i}
+                    </button>
+                );
+            }
+        }
+        
+        // Right ellipsis
+        if (currentPage < totalPages - 1 - displayRange) {
+            buttons.push(
+                <button key="right-ellipsis" className="btn btn-outline-dark disabled">
+                    ...
+                </button>
+            );
+        }
+        
+        // Last page
+        if (totalPages > 1) {
+            buttons.push(
+                <button
+                    key={totalPages}
+                    className={`btn ${currentPage === totalPages ? 'btn-dark' : 'btn-outline-dark'}`}
+                    onClick={() => paginate(totalPages)}
+                >
+                    {totalPages}
                 </button>
             );
         }
@@ -335,7 +381,8 @@ const SearchPage = () => {
     };
 
     
-    console.log(currentItems)
+    console.log(searchQuery)
+    console.log(searchPerformed)
 
     return (
         <div className='search-container'>
@@ -417,9 +464,9 @@ const SearchPage = () => {
                         <div className='d-flex justify-content-between align-items-center'>
                             <div>
                                 <h1 className='m-0 fw-semibold'>
-                                    {searchQuery.length > 0 ? `Search results for: ${searchQuery}` : !filter ? 'Find resources' : `Results found`}
+                                    {searchQuery.length>0 && searchPerformed ? `Search results for: ${searchQuery}` : `Results found`}
                                 </h1>
-                                {searchQuery.length > 0 && (
+                                {searchQuery.length > 0 && searchPerformed && (
                                     <p className="m-0">A total of {displayedResources.length} resource/s found for {searchQuery}</p>
                                 )}
                             </div>
