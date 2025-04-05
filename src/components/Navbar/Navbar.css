@@ -24,16 +24,7 @@
     outline: none !important;
 }
 
-.navbar-box .search .dropdown{
-   background-color: var(--light-gray);
-   border-radius: 0;
-   width: 20px;
-}
 
-.navbar-box .search input{
-    padding: 0 10px;
-    width: 400px;
-}
 
 .navbar-box .search button{
     background-color: var(--tup-color);
@@ -43,5 +34,16 @@
 
 .navbar-box .menu button{
     background-color:transparent;
-    color: var(--open-sans);
+    font-family: var(--open-sans);
+}
+
+@media screen and (max-width:760px) {
+    .navbar-box .menu button{
+       font-size: 0.8rem;
+    }
+
+    .navbar-box .search{
+        height: 40px;
+    }
+    
 }
