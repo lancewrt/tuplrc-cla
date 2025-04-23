@@ -1,5 +1,6 @@
 @import '../../assets/styles/global.css';
 
+
 .view-container .book-info h1,
 .view-container .book-info h4{
     font-family: var(--open-sans) !important;
@@ -24,3 +25,43 @@
     background-color: var(--tup-color);
     /* box-shadow: 2px 2px 5px #00000036; */
 }
+
+.view-container .thesis-cover-pic{
+    height: 600px !important;
+    width: 75%;
+    background-color: var(--tup-color);
+    /* box-shadow: 2px 2px 5px #00000036; */
+}
+
+
+@media (max-width: 992px) {
+    .resource-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .view-container .book-cover {
+        height: auto;
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    .view-container .thesis-cover {
+        height: auto;
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .view-container .thesis-cover-pic {
+        height: 500px !important;
+        width: 100%;
+        max-width: 300px;
+        margin-top: 20px;
+        padding: 20px;
+    }
+}
+

@@ -135,9 +135,9 @@ const HomePage = () => {
             320: { slidesPerView: 1, spaceBetween: 10 },
             480: { slidesPerView: 2, spaceBetween: 10 },
             768: { slidesPerView: 3, spaceBetween: 15 },
-            1024: { slidesPerView: 3, spaceBetween: 20 },
+            1024: { slidesPerView: 4, spaceBetween: 20 }, 
             1200: { slidesPerView: 4, spaceBetween: 25 },
-          }}
+          }}          
           navigation={true}
           mousewheel={true}
           keyboard={true}
@@ -161,7 +161,7 @@ const HomePage = () => {
       </motion.div>
 
       {/* Featured Books */}
-      <motion.div className="container book-container" variants={fadeIn}>
+      <motion.div className="book-container px-4 container" variants={fadeIn}>
         <div className='d-flex align-items-center justify-content-between mb-4'>
           <h4 className='fw-semibold fs-2'>Featured Books</h4>
           <button 
@@ -180,9 +180,10 @@ const HomePage = () => {
             320: { slidesPerView: 1, spaceBetween: 10 },
             480: { slidesPerView: 2, spaceBetween: 10 },
             768: { slidesPerView: 3, spaceBetween: 15 },
-            1024: { slidesPerView: 3, spaceBetween: 20 },
+            1024: { slidesPerView: 4, spaceBetween: 20 }, // changed from 3 to 4
             1200: { slidesPerView: 4, spaceBetween: 25 },
           }}
+          
           navigation={true}
           mousewheel={true}
           keyboard={true}
@@ -211,7 +212,11 @@ const HomePage = () => {
         variants={fadeIn}
       >
         <h2 className='text-light fw-light fs-1'>
-          The Learning Resources Center also houses<br/>Theses and Dissertations
+        <span>The Learning Resources Center</span>
+        <br className="mobile-break" />
+        also houses
+        <br className="mobile-break" />
+        Theses and Dissertations
         </h2>
         <p className="m-0 text-light fs-5 fw-light">
           Look for inspiration or ideas for your upcoming projects here

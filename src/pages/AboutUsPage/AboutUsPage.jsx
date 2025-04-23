@@ -65,35 +65,35 @@ const AboutUsPage = () => {
         </div>
 
         {/* about us */}
-        <div className='aboutus d-flex align-items-center justify-content-between px-5 py-5'>
+        <div className='aboutus d-flex align-items-center justify-content-between px-3 px-lg-5 py-3 py-lg-5'>
             <div className="container">
                 <h1 className='fw-bold'>About Us</h1>
-                <p className='m-0 fs-5'>
+                <p className='m-0 fs-5 fs-lg-1'>
                     The College of Liberal Arts Learning Resource Center (CLA LRC) is your dedicated hub for academic exploration and intellectual growth. Our mission is to provide a comprehensive range of resources and services that support your academic journey.
                 </p>
             </div>
         </div>
         
         {/* gallery */}
-        <div className="gallery px-5">
+        <div className="gallery px-3 px-lg-5">
             <div className="row g-3">
             <div className="col-12 col-md-4">
-            <img src={about2} alt="" className="img-fluid w-100 rounded" />
+                <img src={about2} alt="" className="img-fluid w-100 rounded" />
             </div>
 
-            <div className="col-12 col-md-4">
-            <img src={about1} alt="" className="img-fluid w-100 rounded" />
+            <div className="col-12 col-md-4 d-none d-lg-block">
+                <img src={about1} alt="" className="img-fluid w-100 rounded" />
             </div>
 
-            <div className="col-12 col-md-4">
-            <img src={about} alt="" className="img-fluid w-100 rounded"  />
+            <div className="col-12 col-md-4 d-none d-lg-block">
+                <img src={about} alt="" className="img-fluid w-100 rounded"  />
             </div>
             </div>
         </div>
         
         {/* mission */}
-        <div className="container mission py-5">
-            <div className="row g-4 align-items-center">
+        <div className="container mission py-lg-5 px-3">
+            <div className="row g-4 align-items-center mb-5 mb-lg-0">
                 {/* img */}
                 <div className="col-12 col-md-6 img-box order-2 order-md-1">
                     <img src={lrc} alt="" className='w-100 h-100 rounded-3'/>
@@ -124,9 +124,9 @@ const AboutUsPage = () => {
 </div>
 
         {/* services */}
-        <div className="services w-100 d-flex align-items-center mb-5 mb-md-0">
+        <div className="services w-100 d-flex align-items-center mb-5 mb-md-0 mt-2 mt-lg-5 shadow-sm">
             <div className="container">
-                <div className="row g-4 flex-wrap ">
+                <div className="row g-4 flex-wrap p-5 p-lg-0">
                     <div className="col-12 col-md-6">
                          {/* Title Section */}
                         <h2 className='fw-bold text-tertiary fs-1 text-md-start text-center'>We're Committed to Your Learning Journey</h2>
@@ -160,7 +160,7 @@ const AboutUsPage = () => {
         </div>
 
         {/* prof */}
-        <div className="container remark-box d-flex align-items-center py-5 ">
+        <div className="container remark-box d-flex align-items-center py-2 py-lg-5 px-4">
             <div className="row w-100 g-4 align-items-center">
                 {/* Image Column */}
                 <div className="col-12 col-md-6 text-center">
@@ -178,8 +178,8 @@ const AboutUsPage = () => {
         {/* FAQ Section */}
         <div className="container py-5">
             <div className="row justify-content-center">
-                <div className="col-12 col-md-10 col-lg-8">
-                    <div className="faq d-flex flex-column align-items-center">
+                <div className="col-12 col-md-10 col-lg-8 ">
+                    <div className="faq d-flex flex-column align-items-center p-5">
                 <h2 className="mb-4 mb-md-5 fw-bold fs-1 text-center">Frequently Asked Questions</h2>
                 
                 <div className="accordion accordion-flush w-100" id="accordionFlushExample">

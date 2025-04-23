@@ -56,6 +56,9 @@
     animation: pulse 1.5s infinite linear;
 }
 
+
+
+
 @keyframes pulse {
     0% {
         opacity: 0.6;

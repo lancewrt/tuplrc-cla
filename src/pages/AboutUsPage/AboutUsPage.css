@@ -49,10 +49,10 @@
 }
 
 .about-container .services{
-    margin-top: 100px;
-    height: 80vh;
+    /* margin-top: 100px; */
+    min-height: 80vh;
     background-color: var(--white);
-    box-shadow: 1px 2px 5px rgb(199, 199, 199);
+    /* box-shadow: 1px 2px 5px rgb(199, 199, 199); */
 }
 
 .about-container .remark-box{
@@ -77,7 +77,7 @@
 
 .about-container .faq{
     height: auto;
-    padding: 100px;
+    /* padding: 100px; */
     background-color: var(--white);
     box-shadow: 1px 2px 5px rgb(199, 199, 199);
     border-top-right-radius: 50px;

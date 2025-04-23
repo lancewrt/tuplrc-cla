@@ -10,6 +10,7 @@
     color: var(--white);
 }
 
+
 .book-container{
     margin-top: 100px;
 }
@@ -18,9 +19,9 @@
     font-family: var(--open-sans);
 }
 
-/* Change Swiper arrows to black */
+
 .swiper-button-prev, .swiper-button-next {
-    color: var(--dark-gray) !important; /* Changes the arrow color to black */
+    color: var(--dark-gray) !important; 
 }
 
 .banner{
@@ -31,6 +32,11 @@
     background-size: cover;
     background-position: center;
     margin-top: 100px;
+}
+
+.banner h1 {
+    font-family: var(--playfair);
+    font-size: 2.5rem; 
 }
   
 .banner h2{
@@ -45,6 +51,7 @@
 .see-all{
     color: var(--white);
     background-color: var(--tup-color);
+    font-family: var(--open-sans);
 }
 
 .see-all:hover,
@@ -52,4 +59,58 @@
 .see-all:active{
     color: var(--white);
     background-color: var(--tup-color);
+}
+
+
+@media (max-width: 768px) {
+    .top-welcome {
+        font-size: 14px;
+    }
+
+    .banner  {
+        padding-left: 50px;
+        padding-right: 50px;
+        align-items: center !important;
+    }
+
+    .mobile-break {
+        display: block;
+    }
+
+    .banner h2{
+        font-size: 20px;
+    }
+
+    .book-container{
+        margin-top: 100px;
+        align-items: center !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .see-all {
+        background: none;
+        color: var(--tup-color); 
+        border: none;
+        padding: 0; 
+        font-size: 14px; 
+        text-decoration: underline; 
+        display: inline; 
+    }
+
+    .see-all:hover {
+        text-decoration: none; 
+    } 
+
+    .swiper-slide {
+        display: flex !important;
+        justify-content: center;
+      }
+
+    .mySwiper{
+        display: flex !important;
+        justify-content: center;
+    }
+      
+    
 }
