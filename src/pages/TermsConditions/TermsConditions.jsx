@@ -26,12 +26,12 @@ const TermsConditions = () => {
 
       <div className="container">
         <div className="py-5 p-3 d-flex flex-column justify-content-center">
-          <h1 className='m-0 fw-bold fs-md-5'>Terms and Conditions for the Use of the College of Liberal Arts Learning Resource Center (LRC)</h1>
-          <p className='m-0 fs-md-6'>Our Terms and Conditions outline the rules, rights, and responsibilities for using our services. By accessing or using our facility, you agree to comply with these terms, including guidelines on acceptable use, user obligations, privacy, intellectual property, and liability limitations. Please read them carefully to ensure you understand your rights and obligations when using our services.</p>
+          <h1 className='m-0 fw-bold fs-md-5 open-sans'>Terms and Conditions for the Use of the College of Liberal Arts Learning Resource Center (LRC)</h1>
+          <p className='m-0 fs-md-6 open-sans'>Our Terms and Conditions outline the rules, rights, and responsibilities for using our services. By accessing or using our facility, you agree to comply with these terms, including guidelines on acceptable use, user obligations, privacy, intellectual property, and liability limitations. Please read them carefully to ensure you understand your rights and obligations when using our services.</p>
         </div>
 
         <div className="mb-5">
-          <ul>
+          <ul className='open-sans'>
             {/* article 1 */}
             <li className='fs-4'>Article 1: Name and Nature of the Center</li>
             <ul>
