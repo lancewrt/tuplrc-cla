@@ -147,25 +147,25 @@ const Navbar = ({query}) => {
         <div className="d-flex flex-column px-3 pb-3">
           <button
             onClick={() => handleMenuClick(1, 'Books')}
-            className='mb-2 mobile-menu-item'
+            className='mobile-menu-item text-dark'
           >
             Books
           </button>
           <button
             onClick={() => handleMenuClick(2, 'Journals')}
-            className='mb-2 mobile-menu-item'
+            className='mobile-menu-item text-dark'
           >
             Journals
           </button>
           <button
             onClick={() => handleMenuClick(3, 'Newsletters')}
-            className='mb-2 mobile-menu-item'
+            className='mobile-menu-item text-dark'
           >
             Newsletters
           </button>
           <button
             onClick={() => handleMenuClick(4, 'Theses and Dissertations')}
-            className='mobile-menu-item'
+            className='mobile-menu-item text-dark'
           >
             Theses & Dissertations
           </button>

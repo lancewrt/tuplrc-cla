@@ -14,6 +14,7 @@
 .navbar-box .search{
     height: 50px;
     border: 1px solid var(--medium2-gray);
+    font-family: var(--open-sans);
 }
 
 .navbar-box .search .dropdown, 
@@ -69,6 +70,7 @@
     font-family: var(--open-sans);
     transition: background-color 0.2s;
     border: none !important;
+    
 }
 
 .mobile-menu-item:hover {

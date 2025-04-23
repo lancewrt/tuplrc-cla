@@ -218,11 +218,11 @@ const HomePage = () => {
         <br className="mobile-break" />
         Theses and Dissertations
         </h2>
-        <p className="m-0 text-light fs-5 fw-light">
+        <p className="m-0 text-light fs-5 fw-light open-sans">
           Look for inspiration or ideas for your upcoming projects here
         </p>
         <motion.button 
-          className="btn btn-outline-light text-light p-3"
+          className="btn btn-outline-light text-light p-3 open-sans"
           whileHover={{ scale: 1.1 }}
           onClick={()=>{
             dispatch(setTypeArray([4]))

@@ -149,7 +149,7 @@ const AdvancedSearch = () => {
                                 </select>
                                 <input 
                                     type="text" 
-                                    className='form-control'
+                                    className='form-control open-sans'
                                     placeholder="Enter search value..."
                                     name='input'
                                     onChange={handleInitialFilter}

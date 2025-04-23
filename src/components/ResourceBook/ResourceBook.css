@@ -39,17 +39,20 @@
     color: var(--dark-gray);
     font-size: 1rem;
     text-transform: capitalize;
+    font-family: var(--open-sans);
 }
 
 .resourcebook-box .author{
     color: var(--medium-gray);
     font-size: 0.9rem;
     text-transform: capitalize;
+    font-family: var(--open-sans);
 }
 
 .resourcebook-box .availability{
     box-shadow: 2px 2px 5px #00000036;
     background-color: green;
+    font-family: var(--open-sans);
 }
 .resourcebook-box .loading-animation{
     background: #cfcfcf 25% !important;    
