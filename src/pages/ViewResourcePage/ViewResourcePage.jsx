@@ -98,7 +98,7 @@ const ViewResourcePage = () => {
             {/* path */}
             <div className='mb-3 mb-md-5'>
                 <Link className='text-decoration-none text-dark' to={searchType ? '/search?type=advanced search' : '/search'}>
-                    <p className="mb-0">Go to Search</p>
+                    <p className="mb-0 open-sans">Go to Search</p>
                 </Link>
             </div>
 
@@ -132,7 +132,7 @@ const ViewResourcePage = () => {
                         <>
                             {resource && typeof resource.resource_quantity !== 'undefined' && (
                                 <div
-                                    className={`availability text-light d-flex align-items-center py-1 py-md-2 px-3 px-md-4 rounded-pill 
+                                    className={`availability text-light d-flex align-items-center py-1 py-md-2 px-3 px-md-4 rounded-pill open-sans 
                                         ${resource.resource_quantity === 0 ? 'bg-danger' : 'bg-success'}`}
                                 >
                                     {resource.resource_quantity === 0 ? 'Borrowed' : 'Available'}
@@ -142,7 +142,7 @@ const ViewResourcePage = () => {
                                 {resource && resource.resource_title && (
                                     <>
                                         {resource.resource_title.length < 20 ? (
-                                            <h1 className="m-0 fw-bold text-capitalize fs-2 fs-md-1">{resource.resource_title}</h1>
+                                            <h1 className="m-0 fw-bold text-capitalize fs-2 fs-md-1 open-sans">{resource.resource_title}</h1>
                                         ) : (
                                             <h3 className="m-0 fw-bold text-capitalize fs-4 fs-md-3">{resource.resource_title}</h3>
                                         )}

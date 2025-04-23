@@ -22,3 +22,6 @@
     --medium3-gray: #7B7B7B;
 }
 
+.open-sans{
+    font-family: var(--open-sans);
+}

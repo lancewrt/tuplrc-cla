@@ -179,7 +179,7 @@ const AboutUsPage = () => {
         <div className="container py-5">
             <div className="row justify-content-center">
                 <div className="col-12 col-md-10 col-lg-8 ">
-                    <div className="faq d-flex flex-column align-items-center p-5">
+                    <div className="faq d-flex flex-column align-items-center px-3 py-5 px-lg-5 py-lg-5">
                 <h2 className="mb-4 mb-md-5 fw-bold fs-1 text-center">Frequently Asked Questions</h2>
                 
                 <div className="accordion accordion-flush w-100" id="accordionFlushExample">

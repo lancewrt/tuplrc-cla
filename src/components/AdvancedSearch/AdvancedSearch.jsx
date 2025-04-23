@@ -124,7 +124,7 @@ const AdvancedSearch = () => {
                 <div className="container bg-white shadow-sm rounded p-3 p-md-4 advanced-search">
                     <div className='row search-filters'>
                         <div className="col-12 col-md-9 mb-4 mb-md-0">
-                            <h6 className="mb-3 fs-5">Advanced Search</h6>
+                            <h6 className="mb-3 fs-5 open-sans">Advanced Search</h6>
                             {/* default filter */}
                             <div className='d-flex flex-column flex-md-row gap-2 mb-3'>
                                 <select 
@@ -179,7 +179,7 @@ const AdvancedSearch = () => {
                             </button>
                         </div> 
                         <div className="col-12 col-md-3">
-                            <h6 className="mb-3 fs-5">Limit results by</h6>
+                            <h6 className="mb-3 fs-5 open-sans">Limit results by</h6>
                             {/* resource type */}
                             <select 
                                 className='form-select text-capitalize w-100 mb-3'
