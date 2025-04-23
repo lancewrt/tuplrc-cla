@@ -46,7 +46,7 @@ const AddedFilter = ({index, addedFilter, filters, filterCondition, handleAddFil
                     <option value={item}>{item}</option>
                 ))}
             </select>
-            <input type="text" name='input' className='w-100 ps-2 form-select' placeholder='Enter search value...' onChange={handleChange} value={addedFilter.input}/>
+            <input type="text" name='input' className='w-100 ps-2 form-select open-sans' placeholder='Enter search value...' onChange={handleChange} value={addedFilter.input}/>
             <button className="btn bg-danger text-white" onClick={handleRemoveFilter}>
                 <i class="fa-solid fa-trash"></i>
             </button>
