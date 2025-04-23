@@ -284,9 +284,9 @@ const SearchPage = () => {
     // Change page
     const paginate = (pageNumber) => setCurrentPage(pageNumber);
     
+    // Generate pagination buttons
     const renderPaginationButtons = () => {
         const buttons = [];
-        const displayRange = 1; // How many pages to show before and after current page
         
         // Previous button
         buttons.push(
@@ -299,61 +299,15 @@ const SearchPage = () => {
             </button>
         );
         
-        // First page
-        if (totalPages > 0) {
+        // Page numbers
+        for (let i = 1; i <= totalPages; i++) {
             buttons.push(
                 <button
-                    key={1}
-                    className={`btn ${currentPage === 1 ? 'btn-dark' : 'btn-outline-dark'}`}
-                    onClick={() => paginate(1)}
+                    key={i}
+                    className={`btn ${currentPage === i ? 'btn-dark' : 'btn-outline-dark'}`}
+                    onClick={() => paginate(i)}
                 >
-                    1
-                </button>
-            );
-        }
-        
-        // Left ellipsis
-        if (currentPage > 2 + displayRange) {
-            buttons.push(
-                <button key="left-ellipsis" className="btn btn-outline-dark disabled">
-                    ...
-                </button>
-            );
-        }
-        
-        // Pages around current page
-        for (let i = Math.max(2, currentPage - displayRange); i <= Math.min(totalPages - 1, currentPage + displayRange); i++) {
-            if (i > 1 && i < totalPages) {
-                buttons.push(
-                    <button
-                        key={i}
-                        className={`btn ${currentPage === i ? 'btn-dark' : 'btn-outline-dark'}`}
-                        onClick={() => paginate(i)}
-                    >
-                        {i}
-                    </button>
-                );
-            }
-        }
-        
-        // Right ellipsis
-        if (currentPage < totalPages - 1 - displayRange) {
-            buttons.push(
-                <button key="right-ellipsis" className="btn btn-outline-dark disabled">
-                    ...
-                </button>
-            );
-        }
-        
-        // Last page
-        if (totalPages > 1) {
-            buttons.push(
-                <button
-                    key={totalPages}
-                    className={`btn ${currentPage === totalPages ? 'btn-dark' : 'btn-outline-dark'}`}
-                    onClick={() => paginate(totalPages)}
-                >
-                    {totalPages}
+                    {i}
                 </button>
             );
         }
