@@ -30,18 +30,18 @@ const AddedFilter = ({index, addedFilter, filters, filterCondition, handleAddFil
 
   return (
     <div className='mt-2 add-filter-box'>
-        <div className='d-flex gap-2'>
-            <select name="logic" id="" className='form-select w-25 text-capitalize' onChange={handleChange} value={addedFilter.logic}>
+        <div className='d-flex flex-lg-row flex-column gap-2'>
+            <select name="logic" id="" className='form-select w-100 w-lg-25 text-capitalize' onChange={handleChange} value={addedFilter.logic}>
                 {logical.map(item=>(
                     <option value={item}>{item}</option>
                 ))}
             </select>
-            <select name="filter" id="" className='form-select w-50 text-capitalize' onChange={handleChange} value={addedFilter.filter}>
+            <select name="filter" id="" className='form-select w-100 w-lg-50 text-capitalize' onChange={handleChange} value={addedFilter.filter}>
                 {filters.map(item=>(
                     <option value={item}>{item}</option>
                 ))}
             </select>
-            <select name="condition" id="" className='form-select w-50 text-capitalize' onChange={handleChange} value={addedFilter.condition}>
+            <select name="condition" id="" className='form-select w-100 w-lg-50 text-capitalize' onChange={handleChange} value={addedFilter.condition}>
                 {filterCondition.map(item=>(
                     <option value={item}>{item}</option>
                 ))}
