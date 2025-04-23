@@ -1,8 +1,6 @@
 @import '../../assets/styles/global.css';
 
-.tc-container h1,
-.tc-container p,
-.tc-container ul li{
+.tc-container{
     font-family: var(--open-sans) !important;
     color: var(--dark-gray);
 }

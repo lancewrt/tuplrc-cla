@@ -126,10 +126,10 @@ const AboutUsPage = () => {
         {/* services */}
         <div className="services w-100 d-flex align-items-center mb-5 mb-md-0 mt-2 mt-lg-5 shadow-sm">
             <div className="container">
-                <div className="row g-4 flex-wrap p-5 p-lg-0">
+                <div className="row g-4 flex-wrap p-4 p-lg-0">
                     <div className="col-12 col-md-6">
                          {/* Title Section */}
-                        <h2 className='fw-bold text-tertiary fs-1 text-md-start text-center'>We're Committed to Your Learning Journey</h2>
+                        <h2 className='fw-bold text-tertiary fs-1 text-md-start text-center open-sans'>We're Committed to Your Learning Journey</h2>
                     </div>
 
                     <div className="col-12 col-md-6 d-flex flex-column gap-4">
@@ -206,7 +206,7 @@ const AboutUsPage = () => {
                                     aria-labelledby={headingId} 
                                     data-bs-parent="#accordionFlushExample"
                                 >
-                                    <div className="accordion-body">{item.answer}</div>
+                                    <div className="accordion-body open-sans">{item.answer}</div>
                                 </div>
                             </div>
                         );

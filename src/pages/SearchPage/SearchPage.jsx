@@ -458,7 +458,7 @@ const SearchPage = () => {
                             {/* resource type */}
                             <div className='d-flex flex-column mb-4'>
                                 <h5 className='m-0 mb-2 open-sans'>Resource Type</h5>
-                                <div className="filter-group open-sans">
+                                <div className="filter-group">
                                     {resourceType.map(item => (
                                         <div className='d-flex gap-2 mb-1' key={`type-${item.type_id}`}>
                                             <input 
@@ -468,7 +468,7 @@ const SearchPage = () => {
                                                 ref={el => saveCheckboxRef(el, item.type_id, 'type')}
                                                 onChange={(e) => handleCheckbox(e, item.type_id, 'type')}
                                             /> 
-                                            <label htmlFor={`type-${item.type_id}`} className='text-capitalize filter'>
+                                            <label htmlFor={`type-${item.type_id}`} className='text-capitalize filter open-sans'>
                                                 {item.type_name}
                                             </label>
                                         </div>
@@ -479,7 +479,7 @@ const SearchPage = () => {
                             {/* department */}
                             <div className='d-flex flex-column mb-4'>
                                 <h5 className='m-0 mb-2 open-sans'>Department</h5>
-                                <div className="filter-group open-sans">
+                                <div className="filter-group">
                                     {department && department.map(item => (
                                         <div className='d-flex gap-2 mb-1' key={`dept-${item.dept_id}`}>
                                             <input 
@@ -489,7 +489,7 @@ const SearchPage = () => {
                                                 ref={el => saveCheckboxRef(el, item.dept_id, 'dept')}
                                                 onChange={(e) => handleCheckbox(e, item.dept_id, 'dept')}
                                             /> 
-                                            <label htmlFor={`dept-${item.dept_id}`} className='text-capitalize filter'>
+                                            <label htmlFor={`dept-${item.dept_id}`} className='text-capitalize filter open-sans'>
                                                 {item.dept_name}
                                             </label>
                                         </div>
@@ -500,7 +500,7 @@ const SearchPage = () => {
                             {/* topics */}
                             <div className='d-flex flex-column mb-4'>
                                 <h5 className='m-0 mb-2 open-sans'>Topic</h5>
-                                <div className="filter-group open-sans">
+                                <div className="filter-group">
                                     {topics.map(item => (
                                         <div className='d-flex gap-2 mb-1' key={`topic-${item.topic_id}`}>
                                             <input 
@@ -510,7 +510,7 @@ const SearchPage = () => {
                                                 ref={el => saveCheckboxRef(el, item.topic_id, 'topic')}
                                                 onChange={(e) => handleCheckbox(e, item.topic_id, 'topic')}
                                             /> 
-                                            <label htmlFor={`topic-${item.topic_id}`} className='text-capitalize filter'>
+                                            <label htmlFor={`topic-${item.topic_id}`} className='text-capitalize filter open-sans'>
                                                 {item.topic_name}
                                             </label>
                                         </div>
