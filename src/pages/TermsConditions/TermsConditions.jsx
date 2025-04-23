@@ -31,7 +31,7 @@ const TermsConditions = () => {
         </div>
 
         <div className="mb-5">
-          <ul className='open-sans'>
+          <ul className=''>
             {/* article 1 */}
             <li className='fs-4'>Article 1: Name and Nature of the Center</li>
             <ul>

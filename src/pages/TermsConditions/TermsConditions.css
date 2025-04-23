@@ -4,3 +4,7 @@
     font-family: var(--open-sans) !important;
     color: var(--dark-gray);
 }
+
+.tc-container li{
+    font-family: var(--open-sans) !important;
+}
