@@ -3,7 +3,7 @@
 .navbar-box .logo, .navbar-box .logo span{
     color: var(--dark-gray);
     font-size: 2rem;
-    font-family: var(--playfair);
+    font-family: var(--playfair) !important;
     font-weight: 500;
 }
 

@@ -3,6 +3,7 @@
 footer {
     background-color: var(--tup-color);
     width: 100%;
+    color: #fff !important;
     /* height: 50vh; */
     /* margin-top: 100px; */
 }

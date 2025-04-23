@@ -446,7 +446,7 @@ const SearchPage = () => {
                     <div className={`col-lg-3 mb-4 ${showFilters ? 'd-block' : 'd-none d-lg-block'}`}>
                         <div className="filter-sidebar p-3  rounded">
                             <div className="d-flex justify-content-between align-items-center mb-3">
-                                <h4 className="m-0">Filters</h4>
+                                <h4 className="m-0 open-sans">Filters</h4>
                                 <button 
                                     className="btn btn-sm btn-outline-dark d-lg-none"
                                     onClick={toggleFilters}
@@ -457,8 +457,8 @@ const SearchPage = () => {
                             
                             {/* resource type */}
                             <div className='d-flex flex-column mb-4'>
-                                <h5 className='m-0 mb-2'>Resource Type</h5>
-                                <div className="filter-group">
+                                <h5 className='m-0 mb-2 open-sans'>Resource Type</h5>
+                                <div className="filter-group open-sans">
                                     {resourceType.map(item => (
                                         <div className='d-flex gap-2 mb-1' key={`type-${item.type_id}`}>
                                             <input 
@@ -478,8 +478,8 @@ const SearchPage = () => {
 
                             {/* department */}
                             <div className='d-flex flex-column mb-4'>
-                                <h5 className='m-0 mb-2'>Department</h5>
-                                <div className="filter-group">
+                                <h5 className='m-0 mb-2 open-sans'>Department</h5>
+                                <div className="filter-group open-sans">
                                     {department && department.map(item => (
                                         <div className='d-flex gap-2 mb-1' key={`dept-${item.dept_id}`}>
                                             <input 
@@ -499,8 +499,8 @@ const SearchPage = () => {
 
                             {/* topics */}
                             <div className='d-flex flex-column mb-4'>
-                                <h5 className='m-0 mb-2'>Topic</h5>
-                                <div className="filter-group">
+                                <h5 className='m-0 mb-2 open-sans'>Topic</h5>
+                                <div className="filter-group open-sans">
                                     {topics.map(item => (
                                         <div className='d-flex gap-2 mb-1' key={`topic-${item.topic_id}`}>
                                             <input 

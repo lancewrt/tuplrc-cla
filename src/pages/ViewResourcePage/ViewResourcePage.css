@@ -1,14 +1,5 @@
 @import '../../assets/styles/global.css';
 
-
-.view-container .book-info h1,
-.view-container .book-info h4,
-.view-container .book-info h5,
-.view-container p{
-    font-family: var(--open-sans) !important;
-    color: var(--dark-gray);
-}
-
 .view-container .author,
 .view-container .info{
     font-family: var(--open-sans) !important;

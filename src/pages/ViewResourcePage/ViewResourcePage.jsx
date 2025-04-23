@@ -110,10 +110,10 @@ const ViewResourcePage = () => {
                             <div className="placeholder w-100 h-100"></div>
                         </div>
                     ) : resource && resource.type_id !== 4 ? (
-                        <img src={preview} alt={resource.resource_title} className='book-cover img-fluid rounded shadow' />
+                        <img src={preview} alt={resource.resource_title} className='book-cover img-fluid rounded shadow open-sans' />
                     ) : (
                         <div
-                            className="thesis-cover-pic d-flex justify-content-center align-items-center text-light p-4 p-md-5 text-center text-uppercase rounded"
+                            className="thesis-cover-pic d-flex justify-content-center align-items-center text-light p-4 p-md-5 text-center text-uppercase rounded open-sans"
                             >
                             {resource.resource_title}
                         </div>
@@ -144,35 +144,35 @@ const ViewResourcePage = () => {
                                         {resource.resource_title.length < 20 ? (
                                             <h1 className="m-0 fw-bold text-capitalize fs-2 fs-md-1 open-sans">{resource.resource_title}</h1>
                                         ) : (
-                                            <h3 className="m-0 fw-bold text-capitalize fs-4 fs-md-3">{resource.resource_title}</h3>
+                                            <h3 className="m-0 fw-bold text-capitalize fs-4 fs-md-3 open-sans">{resource.resource_title}</h3>
                                         )}
-                                        <p className="m-0 author">by {resource.authors}</p>
+                                        <p className="m-0 author open-sans">by {resource.authors}</p>
                                     </>
                                 )}
                             </div>
                             <div className="info-section w-100">
-                                <h5 className='m-0 info-label'>Published Date</h5>
-                                <p className="m-0 fs-6 fs-md-5 info">{resource && resource.resource_published_date}</p>
+                                <h5 className='m-0 info-label open-sans'>Published Date</h5>
+                                <p className="m-0 fs-6 fs-md-5 info open-sans">{resource && resource.resource_published_date}</p>
                             </div>
                             <div className="info-section w-100">
-                                <h5 className='m-0 info-label'>Department</h5>
-                                <p className="m-0 fs-6 fs-md-5 info text-capitalize">{resource && resource.dept_name}</p>
+                                <h5 className='m-0 info-label open-sans'>Department</h5>
+                                <p className="m-0 fs-6 fs-md-5 info text-capitalize open-sans">{resource && resource.dept_name}</p>
                             </div>
                             <div className="info-section w-100">
-                                <h5 className='m-0 info-label'>Topic</h5>
-                                <p className="m-0 fs-6 fs-md-5 info text-capitalize">{resource && resource.topic_name}</p>
+                                <h5 className='m-0 info-label open-sans'>Topic</h5>
+                                <p className="m-0 fs-6 fs-md-5 info text-capitalize open-sans">{resource && resource.topic_name}</p>
                             </div>
                             <div className="info-section w-100">
-                                <h5 className='m-0 info-label'>Shelf No.</h5>
-                                <p className="m-0 fs-6 fs-md-5 info">{resource && resource.dept_shelf_no}</p>
+                                <h5 className='m-0 info-label open-sans'>Shelf No.</h5>
+                                <p className="m-0 fs-6 fs-md-5 info open-sans">{resource && resource.dept_shelf_no}</p>
                             </div>
                             <div className="info-section w-100">
-                                <h5 className='m-0 info-label'>Row No.</h5>
-                                <p className="m-0 fs-6 fs-md-5 info">{resource && resource.topic_row_no}</p>
+                                <h5 className='m-0 info-label open-sans'>Row No.</h5>
+                                <p className="m-0 fs-6 fs-md-5 info open-sans">{resource && resource.topic_row_no}</p>
                             </div>
                             {resource && resource.resource_is_circulation == 1
-                                ? <p className="m-0 fst-italic text-danger fs-6">This resource can be borrowed and is not limited to use within the premises.</p>
-                                : <p className="m-0 fst-italic text-danger fs-6">This resource cannot be borrowed and is limited to use within the premises.</p>
+                                ? <p className="m-0 fst-italic text-danger fs-6 open-sans">This resource can be borrowed and is not limited to use within the premises.</p>
+                                : <p className="m-0 fst-italic text-danger fs-6 open-sans">This resource cannot be borrowed and is limited to use within the premises.</p>
                             }
                         </>
                     )}
@@ -181,7 +181,7 @@ const ViewResourcePage = () => {
 
             {/* related resource */}
             <div className="row mx-auto mt-4 mt-md-5">
-                <h4 className='fw-semibold mb-3'>Related Resources</h4>
+                <h4 className='fw-semibold mb-3 open-sans'>Related Resources</h4>
                 {relatedBooksLoading ? (
                     <div className="placeholder-glow w-100">
                         <div className="d-flex flex-wrap gap-3">
@@ -219,7 +219,7 @@ const ViewResourcePage = () => {
                             ))
                         ) : (
                             <div className="text-center w-100 py-4">
-                                <p>No related resources found</p>
+                                <p className='open-sans'>No related resources found</p>
                             </div>
                         )}
                     </Swiper>
