@@ -44,7 +44,7 @@ const AboutUsPage = () => {
         },
         {
             question: "What happens if a student fails to return a book on time?",
-            answer: "Students who do not return books on time will be banned from using the LRC. Please ensure that borrowed books are returned by the due date to avoid restrictions."
+            answer: "Students who do not return books on time will be banned from borrowing books. Please ensure that borrowed books are returned by the due date to avoid restrictions."
         },
         {
             question: "Is there a designated study area in the LRC?",
