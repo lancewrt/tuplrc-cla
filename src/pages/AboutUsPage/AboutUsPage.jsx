@@ -168,7 +168,7 @@ const AboutUsPage = () => {
                 </div>
 
                 <div className="col-12 col-md-6 d-flex flex-column justify-content-center text-md-start text-center">
-                    <h2 className='prof m-0 fw-bold fs-1'>Prof. Jaime Jr. E. Mozo</h2>
+                    <h2 className='prof m-0 fw-bold fs-1'>Prof. Marie Ragos</h2>
                     <p className="m-0 position fw-semibold ">Coordinator of College of Liberal Arts’ Learning Resources Center</p>
                     <p className="m-0 remarks mt-3 fw-semibold">The vision is to create an environment where students, faculty, and staff can easily access valuable resources, benefit from exceptional services, and thrive within a culture of continuous learning and collaboration. By prioritizing accessibility, responsiveness, and innovation, the coordinator aims to contribute to the academic and personal growth of every individual who engages with the center, fostering a supportive community that encourages success and development.</p>
                 </div>
